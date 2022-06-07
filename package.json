@@ -1,4 +1,6 @@
 {
+  "name": "hunter",
+  "version": "1.0.0",
   "private": true,
   "main": "main/index.js",
   "productName": "ElectronTypescriptNext",
@@ -22,10 +24,13 @@
     "@types/node": "^14.14.6",
     "@types/react": "^16.9.9",
     "@types/react-dom": "^16.9.9",
+    "autoprefixer": "^10.3.1",
     "electron": "^13",
     "electron-builder": "^22.9.1",
     "next": "latest",
+    "postcss": "^8.3.5",
     "rimraf": "^3.0.0",
+    "tailwindcss": "^2.2.4",
     "typescript": "^4.0.5"
   },
   "build": {
@@ -33,6 +38,10 @@
     "files": [
       "main",
       "renderer/out"
-    ]
+    ],
+    "mac": {
+      "target": "dmg",
+      "icon": "public/kirua.png"
+    }
   }
 }
